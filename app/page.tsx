@@ -28,6 +28,28 @@ const imageRoutes: string[] = [
   "/emailInsTou",
 ];
 
+const imageTitles: string[] = [
+  "Hero Search",
+  "Band Stats",
+  "Solar Search",
+  "Eye Wave",
+  "Banners",
+  "Multi Cube",
+  "San Email",
+  "Ins Email",
+];
+
+const imageDescriptions: string[] = [
+  "Discover superheroes",
+  "Explore band statistics",
+  "Search solar systems",
+  "Experience Eye Wave",
+  "Create banners",
+  "Play with cubes",
+  "Manage San emails",
+  "Handle Ins emails",
+];
+
 const Home: React.FC = () => {
   const imageContainerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -97,8 +119,8 @@ const Home: React.FC = () => {
               />
             </Link>
             <div className={styles.selectionDescription}>
-              <h1 className={styles.h1}>TEST</h1>
-              <p className={styles.h2}>Test2</p>
+            <h1 className={styles.h1}>{imageTitles[index]}</h1>
+            <p className={styles.h2}>{imageDescriptions[index]}</p>
             </div>
           </div>
         ))}
