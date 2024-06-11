@@ -25,7 +25,7 @@ const imageRoutes: string[] = [
   "/banners",
   "/multiCube",
   "/emailSanTou",
-  "/emailInsTou",
+  "/emailInsBe",
 ];
 
 const imageTitles: string[] = [
