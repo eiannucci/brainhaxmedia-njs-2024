@@ -10,7 +10,7 @@ import {
   Card,
 } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import "bootstrap/dist/css/bootstrap.min.css";  // Ensure Bootstrap CSS is imported
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../scss/HeroSearch.module.scss";
 import "../scss/FontFace.module.scss";
 import ReactGA from "react-ga";

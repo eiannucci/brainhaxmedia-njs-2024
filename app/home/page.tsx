@@ -2,19 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./home.module.css";
+import styles from "../home.module.css";
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const imageSources: string[] = [
-  "/cover-superhero.jpg",
-  "/cover-bandstats.jpg",
-  "/cover-solarsearch.jpg",
-  "/cover-eyewave.png",
-  "/cover-banners.png",
-  "/cover-cube.png",
-  "/cover-san-email.png",
-  "/cover-ins-email.png",
+  "/images/cover-superhero.jpg",
+  "/images/cover-bandstats.jpg",
+  "/images/cover-solarsearch.jpg",
+  "/images/cover-eyewave.png",
+  "/images/cover-banners.png",
+  "/images/cover-cube.png",
+  "/images/cover-san-email.png",
+  "/images/cover-ins-email.png",
 ];
 
 const imageRoutes: string[] = [
@@ -87,13 +87,14 @@ const Home: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="/logo512.png"
+            <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
+            {/* <Image
+              src="/images/logo512.png"
               alt="Brainhaxmedia Logo"
               className={styles.logo}
               fill
               priority
-            />
+            /> */}
           </a>
         </div>
         <p>
@@ -108,7 +109,8 @@ const Home: React.FC = () => {
             className={styles.imageContainer}
           >
             <Link href={imageRoutes[index]}>
-              <Image
+            <img src={src} className={styles.projectImage} width={300} height={169} alt="project image"></img>
+              {/* <Image
                 className={styles.projectImage}
                 src={src}
                 alt={`Image ${index + 1}`}
@@ -116,7 +118,7 @@ const Home: React.FC = () => {
                 height={169}
                 // layout="fill"
                 priority
-              />
+              /> */}
             </Link>
             <div className={styles.selectionDescription}>
             <h1 className={styles.h1}>{imageTitles[index]}</h1>

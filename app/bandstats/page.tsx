@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface Band {
@@ -32,20 +32,39 @@ interface Album {
 
 const Home: React.FC = () => {
   const [bands, setBands] = useState<Band[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get<{ bands: Band[] }>('/api/bands');
-        const sortedBands = response.data.bands.sort((a, b) => a.band_name.localeCompare(b.band_name));
-        setBands(sortedBands);
+        
+        // Log the response to see the structure
+        console.log('API Response:', response);
+
+        if (response.data && Array.isArray(response.data.bands)) {
+          const sortedBands = response.data.bands.sort((a, b) => a.band_name.localeCompare(b.band_name));
+          setBands(sortedBands);
+        } else {
+          console.error('Unexpected response structure:', response);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <Container fluid className="text-center my-5">
+        <Spinner animation="border" />
+      </Container>
+    );
+  }
 
   return (
     <Container fluid>
@@ -53,7 +72,7 @@ const Home: React.FC = () => {
         {bands.map((band, index) => (
           <Col key={index} sm={12} md={4}>
             <Card className="m-4">
-              {band.image ? (
+            {band.image ? (
                 <Image
                   src={band.image}
                   alt={band.band_name}
@@ -112,8 +131,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-
-
-
-
