@@ -29,7 +29,7 @@ interface Album {
   sales: string;
 }
 
-const Home: React.FC = () => {
+const BandStats: React.FC = () => {
   const [bands, setBands] = useState<Band[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -131,5 +131,5 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default BandStats;
 

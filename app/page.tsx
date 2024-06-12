@@ -24,7 +24,7 @@ const imageRoutes: string[] = [
   "/eyewave",
   "/banners",
   "/multiCube",
-  "/emailSanTou",
+  "/emails/santou/index.html",
   "/emailInsBe",
 ];
 
@@ -80,28 +80,26 @@ const Home: React.FC = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <div className={styles.imgCon}>
-          <a
-            href="https://brainhaxmedia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
-            {/* <Image
-              src="/images/logo512.png"
-              alt="Brainhaxmedia Logo"
-              className={styles.logo}
-              fill
-              priority
-            /> */}
-          </a>
-        </div>
-        <p>
-          <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;</span><code className={styles.code}>Senior Interactive Developer</code>
-        </p>
-      </div>
       <div className={styles.center}>
+        <div className={styles.description}>
+          <div className={styles.imgCon}>
+            <a
+              href="https://brainhaxmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
+              {/* <Image
+                src="/images/logo512.png"
+                alt="Brainhaxmedia Logo"
+                className={styles.logo}
+                fill
+                priority
+              /> */}
+            </a>
+            <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;</span><code className={styles.code}>Senior Interactive Developer</code>
+          </div>
+        </div>
         {imageSources.map((src, index) => (
           <div
             key={index}
@@ -109,7 +107,7 @@ const Home: React.FC = () => {
             className={styles.imageContainer}
           >
             <Link href={imageRoutes[index]}>
-            <img src={src} className={styles.projectImage} width={300} height={169} alt="project image"></img>
+              <img src={src} className={styles.projectImage} width={300} height={169} alt="project image"></img>
               {/* <Image
                 className={styles.projectImage}
                 src={src}
@@ -121,8 +119,8 @@ const Home: React.FC = () => {
               /> */}
             </Link>
             <div className={styles.selectionDescription}>
-            <h1 className={styles.h1}>{imageTitles[index]}</h1>
-            <p className={styles.h2}>{imageDescriptions[index]}</p>
+              <h1 className={styles.h1}>{imageTitles[index]}</h1>
+              <p className={styles.h2}>{imageDescriptions[index]}</p>
             </div>
           </div>
         ))}

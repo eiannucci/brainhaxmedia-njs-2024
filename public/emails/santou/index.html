@@ -1,0 +1,2286 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--FCB Email Boilerplate v2.5.5-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8895-1"/> SWITCH to THIS meta to catch any unconverted special characters--><!-- <meta name="format-detection" content="telephone=no"/><meta http-equiv=”X-UA-Compatible” content="IE=edge"/> -->
+  <title>Email Code Example :: Elijah Iannucci</title>
+  <style type="text/css">
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+
+    ul {
+      list-style-type: none;
+      /* Remove default bullets */
+      padding: 0;
+      /* Remove default padding */
+    }
+
+    ul li::before {
+      /* content: "\2022"; */
+      /* Unicode for a bullet character */
+      /* color: #1FA71C; */
+      /* Set color for the bullet */
+      /* display: inline-block; */
+      /* Make the bullet inline */
+      /* width: 1em; */
+      /* Set the width of the bullet */
+      /* margin-left: -1em; */
+      /* Adjust margin to align bullet with text */
+    }
+
+    .custom-bullet {}
+
+    body {
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    table td {
+      border-collapse: collapse;
+      border-spacing: 0;
+      mso-line-height-rule: exactly;
+      mso-margin-bottom-alt: 0;
+      mso-margin-top-alt: 0;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: black;
+      line-height: 100%;
+    }
+
+    strong,
+    b {
+      font-weight: bold;
+    }
+
+    sup,
+    sub {
+      line-height: 0;
+      font-size: 75%;
+    }
+
+    sup.align-top {
+      position: relative;
+      top: 2px
+    }
+
+    sup.align-top2 {
+      position: relative;
+      top: 2px;
+      font-size: 65%
+    }
+
+    a,
+    a:link {
+      color: #555555;
+      text-decoration: none;
+    }
+
+    href>a {
+      text-decoration: none;
+    }
+
+    body,
+    #body_style {
+      margin: 0 auto;
+      background: #FFF;
+      min-height: 1000px;
+      color: #000000;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    span.yshortcuts {
+      color: #000;
+      background-color: none;
+      border: none;
+    }
+
+    span.yshortcuts:hover,
+    span.yshortcuts:active,
+    span.yshortcuts:focus {
+      color: #000;
+      background-color: none;
+      border: none;
+    }
+
+    a span {
+      color: #555555 !important;
+    }
+
+    a span.white {
+      color: #ffffff !important;
+    }
+
+    a span.black {
+      color: #000000 !important;
+    }
+
+    a[class="bodyLink"] {
+      color: #000000 !important;
+      text-decoration: none !important;
+    }
+
+    a[href^=tel] {
+      color: #555555;
+      text-decoration: none;
+    }
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #582887;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    h4 {
+      font-size: 25px;
+    }
+
+    h5 {
+      font-size: 18px;
+    }
+
+    h6 {
+      font-weight: bold;
+      color: #582887;
+      font-size: 16px !important;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    small strong {
+      color: inherit;
+    }
+
+    img {
+      border-style: none !important;
+    }
+
+    @media only screen and (min-width:639px) {
+      .desktop-padding {
+        padding: 12px;
+      }
+
+      img.rav-btn {
+        width: 201px;
+        padding-left: 0 !important;
+      }
+    }
+
+    @media only screen and (max-width:639px) {
+
+      table[class*="table"],
+      td[class*="cell"] {
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      img[class="fluid"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* img[class="mobileLogo"] {
+        width: 275px !important;
+        height: 179px !important;
+      } */
+
+
+      td[class="font-size-14"] {
+        font-size: 14px !important;
+        padding-bottom: 20px !important;
+        padding-top: 20px !important;
+      }
+
+      td[class="font-size-18"] {
+        font-size: 18px !important;
+        line-height: 22px;
+      }
+
+      td[class="font-size-title"] {
+        font-size: 14px !important;
+      }
+
+      span[class="font-size-18"] {
+        font-size: 18px !important;
+        line-height: 22px !important;
+      }
+
+
+      td[class="mobileHide"] {
+        display: none !important;
+      }
+
+      tr[class="mobileHide"] {
+        display: none !important;
+      }
+
+      span[class*="mobileHide"] {
+        display: none !important;
+      }
+
+      span[class*="mobileWrap"] {
+        white-space: normal !important;
+      }
+
+      table[class="table mobileHide"] {
+        display: none !important;
+      }
+
+      br[class="mobileHide"] {
+        display: none !important;
+      }
+
+      td[class="mobileShow"] {
+        overflow: visible !important;
+        float: none !important;
+        display: table-cell !important;
+        max-height: 1000px !important;
+        width: auto !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      td[class="mobileShow2"] {
+        overflow: visible !important;
+        float: none !important;
+        display: table-cell !important;
+        max-height: 1000px !important;
+        width: 15px !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      tr[class="mobileShow"] {
+        overflow: visible !important;
+        float: none !important;
+        display: block !important;
+        max-height: 1000px !important;
+        width: auto !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      table[class="mobileShow"] {
+        overflow: visible !important;
+        float: none !important;
+        display: table !important;
+        max-height: 1000px !important;
+        width: auto !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      br[class="mobileShow"] {
+        overflow: visible !important;
+        float: none !important;
+        display: table !important;
+        max-height: 1000px !important;
+        width: auto !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      td[class="mobileWidth25px"] {
+        width: 25px !important;
+      }
+
+      td[class="mobileWidth20px"] {
+        width: 20px !important;
+      }
+
+
+      td[class="mobileWidth50px"] {
+        width: 50px !important;
+      }
+
+      td[class="mobileWidth2"] {
+        width: 10px !important;
+      }
+
+      td[class="mobileWidth8px"] {
+        width: 8px !important;
+      }
+
+      td[class="mobileWidth5px"] {
+        width: 5px !important;
+      }
+
+      td[class="mobileWidth10px"] {
+        width: 10px !important;
+      }
+
+      td[class="mobileWidth90px"] {
+        width: 90px !important;
+      }
+
+      td[class="mobileHeight10px"] {
+        height: 10px !important;
+        font-size: 10px !important;
+        line-height: 10px !important;
+      }
+
+      td[class="mobileHeight2"] {
+        height: 20px !important;
+        font-size: 20px !important;
+        line-height: 20px !important;
+      }
+
+      td[class="mobileHeight3"] {
+        height: 10px !important;
+        font-size: 10px !important;
+        line-height: 10px !important;
+      }
+
+      td[class="mobileAlign"] {
+        text-align: center !important;
+      }
+
+      td[class="mobileFont16px"] {
+        font-size: 16px !important;
+        line-height: 19px !important;
+      }
+
+      td[class="mobileFont14px"] {
+        font-size: 14px !important;
+        line-height: 17px !important;
+
+      }
+
+      .mob-link {
+        padding: 5px !important;
+      }
+
+      .mobileh4 {
+        padding-top: 10px;
+      }
+
+      .preheader {
+        display: block !important;
+        clear: both !important;
+      }
+
+      table.table-button {
+        width: 214px !important;
+      }
+    }
+
+    @media only screen and (max-width:374px) {
+      .mob-link {
+        font-size: 11px !important;
+      }
+    }
+  </style>
+  <style type="text/css" id="ignore">
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding:
+        0 !important;
+      width: 100% !important;
+    }
+
+    html {
+      -webkit-text-size-adjust: none;
+    }
+
+    .master-container {
+      max-width: 600px !important;
+    }
+
+    .preheader,
+    .hero-header,
+    .footer,
+    .content-body {
+      display: block !important;
+      clear: both !important;
+    }
+
+    .preheader {
+      max-width: 620px !important;
+    }
+
+    .container {
+      max-width: 600px !important;
+      width: 100% !important;
+    }
+
+    .applefix a {
+      color: #3F3F3F !important;
+      text-decoration: none !important;
+    }
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    .two-column {
+      text-align: left;
+      font-size: 0;
+    }
+
+    .two-column .column {
+      width: 100%;
+      max-width: 290px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    @media only screen and (max-width:639px) {
+      .two-column .column {
+        width: 100%;
+        max-width: 100% !important;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .mobile-pl-75 {
+        padding-left: 75px;
+      }
+
+      .mobile-pr-75 {
+        padding-right: 75px;
+      }
+
+      .mobile-pl-12 {
+        padding-left: 25px;
+      }
+
+      .mobile-pr-25 {
+        padding-right: 25px;
+      }
+
+      .mobile-pl-12 {
+        padding-left: 12px;
+      }
+
+      .mobile-pr-12 {
+        padding-right: 12px;
+      }
+
+      .preheader {
+        display: none !important;
+        visibility: hidden;
+        mso-hide: all;
+        font-size: 1px;
+        color: #ffffff;
+        line-height: 1px;
+        max-height: 0px;
+        max-width: 0px;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+
+      .master-container {
+        width: auto !important;
+      }
+
+      .container,
+      .headline-container {
+        width: auto !important;
+      }
+
+      .full {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+
+      .hide-small {
+        display: none !important;
+        height: 0px !important;
+      }
+
+      .show-small {
+        max-height: 100% !important;
+        height: auto !important;
+        display: block !important;
+      }
+
+      .rule {
+        width: 100% !important;
+      }
+
+      .Krys-logo {
+        padding-bottom: 10px !important;
+      }
+
+      .bot-bor {
+        border-bottom: 1px solid #999999 !important;
+      }
+
+      .links-table {
+        width: auto !important;
+      }
+
+      .top-links {
+        padding-top: 10px !important;
+        text-align: left !important;
+      }
+
+      .frag-img {
+        padding-bottom: 20px;
+      }
+    }
+
+    @media yahoo {
+      .column {
+        max-width: 290px !important;
+      }
+    }
+  </style>
+  <!--[if gte mso 9]><style type="text/css">sup{font-size:90% !important;vertical-align:top !important;}</style><![endif]-->
+</head>
+<!--body: Setting topmargin, bottommargin, leftmargin, rightmargin, marginheight and marginwidth are set to "0" to account for a specific vendor (BUDCO) issue in Outlook -->
+
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0"
+  style="padding:0;margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%;background-color:#ffffff;min-height:1000px;font-family:Helvetica,sans-serif;">
+  <!--Preheader-->
+  <!-- <div class="preheader" style="font-size:1px;color:#ffffff;">{{customText[Let’s review a case for an older patient on a
+    complex T2DM regimen|A case study for Claire - an older adult on a complex T2DM regimen|Sorry I missed you! Below is
+    information to rethink T2DM treatment for patients on complex regimens|Following up with additional data for complex
+    T2DM patients on Medicare|Thanks for the time. Please see more information below]}}
+  </div> -->
+  <div id="body_style" align="center" style="padding:0px" bgcolor="#fffffff">
+    <table cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" class="table" style="border: 1px solid gray;">
+      <tr>
+        <td align="center">
+          <!-- VARIABLE PREHEADER -->
+          <!-- LANTUS LOGO + CONTACT INFO -->
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" style="max-width:600px;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <!--mobile header open-->
+                  <tr>
+                    <td width="0" valign="top" class="mobileShow"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="mobileShow" align="center"
+                            style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                            <a href="https://www.toujeopro.com/" target="_blank">
+                              <img
+                                src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Ftoujeo-logo.jpg"
+                                alt="Toujeo logo" width="275" height="179"
+                                style="display:block;padding: 20px 0;text-align:center;border:0px;" />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!--mobile header close-->
+                </table>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="10"></td>
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <!--DESKTOP HEADER OPEN-->
+                        <tr>
+                          <td width="0"></td>
+                          <td align="left" class="mobileHide" valign="top" width="275">
+                            <a href="https://www.toujeopro.com/" target="_blank">
+                              <img
+                                src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Ftoujeo-logo.jpg"
+                                alt=" logo" width="275" height="179" border="0" style="display:block;" />
+                            </a>
+                          </td>
+                          <td align="right" valign="top" width="360">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="right"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:21px;color:#000000; font-weight: bold;">
+                                  {{userName}} </td>
+                              </tr>
+                              <tr>
+                                <td align="right"
+                                  style="font-family: Arial,sans-serif;font-size:14px;line-height:17px;color:#000000;">
+                                  <a href="mailto:{{User.SANOFI_Email__c}}"
+                                    style="color:#000000;">{{User.SANOFI_Email__c}}</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="right"
+                                  style="font-family: Arial, sans-serif;font-size:14px;line-height:17px;color:#000000;">
+                                  <a href="tel:{{User.MobilePhone}}" style="color:#000000;">{{User.MobilePhone}}</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="12" style="font-size:12px;line-height:12px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="right"> <a
+                                    href="https://diabetes-dot-vci-live.uc.r.appspot.com/callform?brandname=toujeo"
+                                    target="_blank"> <img
+                                      src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fcta-request.png"
+                                      alt="Request A Visit" width="150" height="33" border="0"
+                                      style="display:block;" /></a></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="20" style="font-size:20px;line-height:20px;"></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td width="25" style="line-height: 25px; font-size: 25px;"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- Header -->
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <!-- <td width="10"></td> -->
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td height="20" style="font-size:10px;line-height:10px;"></td>
+                        </tr>
+                        <tr>
+                          <td align="left" class="mobile-pl-12 mobile-pr-12"
+                            style="font-family:Arial,sans-serif;font-size:16px;line-height:21px;color:#000000;padding-left:10px;padding-right:10px"
+                            class="mobileFont14px">
+                            <span style="color:#1FA71C">
+                              {{customText[Dear|Hello|Hi|]}} {{customText[##Account.Salutation##|
+                              |]}}{{customText[##accFname##, |##accLname##, |##accFname## ##accLname##, |##accLname##
+                              ##accFname##, | |]}}
+                            </span>
+                            <br /><br />
+                            {{customText[##Account.introText##| |]}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="20" style="font-size:20px;line-height:20px;"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px;" class="table">
+            <tr>
+              <td height="10" style="font-size:10px;line-height:10px;">
+              </td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12"
+                style="font-family:Arial,sans-serif;font-size:16px;line-height:21px;color:#461e6c; font-size: 20px;font-weight: bold;text-transform:uppercase;padding-left: 12px">
+                After a GLP-1 RA, do you<br class="mobileShow"
+                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;" />
+                consider initiating<br class="mobileShow"
+                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;" />
+                a <br class="mobileHide" /> basal insulin like Toujeo<sup>&reg;</sup>?
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+
+                        <tr>
+                          <td class="mobileHide" align="center">
+                            <img style="margin-top: 8px;height:20px;"
+                              src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader.png"
+                              alt="" width="580" height="20" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="0" valign="top" class="mobileShow"
+                            style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="mobileShow" align="center"
+                                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                                  <img align="center"
+                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader-mobile.png"
+                                    vheight="20" alt="Do you know the Full Toujeo Max Story ?" width="100%"
+                                    height="auto"
+                                    style="display: block; padding: 12px 0; text-align: center; border: 0px;height:20px;" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="8" style="font-size:8px;line-height:8px;"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" class="table">
+                  <tr>
+                    <td>
+                    </td>
+                    <!-- <td width="25">
+                    </td> -->
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td height="5" style="font-size:5px;line-height:5px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+                                <td class="mobileHide">
+                                  <img width="580" align="center"
+                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Ficon40.png"
+                                    alt="Icon 40 percent"
+                                    style="display: block;text-align:center;border:0;max-width:580px" />
+                                </td>
+                                <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+                              </tr>
+                              <tr>
+                                <td width="0" valign="top" class="mobileShow"
+                                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                  <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="mobileShow" align="center"
+                                        style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                        <img align="center"
+                                          src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fm-icon40.png"
+                                          alt="Icon 40 percent"
+                                          style="display: block; text-align: center; border: 0px; max-width: 100%;" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- MAIN COPY 1 -->
+          <!--pen-graphic-lockup-->
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px; " class="table">
+            <tr>
+              <td height="20" style="font-size:20px;line-height:20px;"></td>
+            </tr>
+            <tr>
+              <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+              <td class="mobile-pl-12 mobile-pr-12">
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 14px;">
+                  <span style="margin-left: -7px; display: inline-block; vertical-align: top;padding-left:5px">*</span>
+                  Data extracted from electronic medical records.<sup
+                    style="vertical-align:top;margin-top:0;line-height:10px;">1</sup>
+                </p>
+                <p
+                  style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 14px; text-align: left;padding-left:5px;">
+                  <sup style="margin-left: -7px; display: inline-block; vertical-align: top;margin-top: 4px;">†</sup>
+                  <strong>RESTORE-G study design:</strong> The primary endpoint was the proportion of GLP-1 RA ±
+                  OAD–treated patients who switched to BI or FRC, or added-on BI among all GLP-1 RA–treated patients
+                  changing their therapy. <strong>Inclusion criteria:</strong> Insulin-naive adult patients with a
+                  diagnosis of T2DM treated with GLP-1 RA ± oral hypoglycemic agents (OHA) and changing their therapy as
+                  per diabetologist
+                  prescription; initiation of BI/FRC in addition to or in substitution for GLP-1 RA with index date (ie,
+                  date of the first prescription of BI/FRC) from January 2011 to September 2021; prescription of GLP-1
+                  RA (weekly or daily) + OHA before initiating BI or switching to BI/FRC. <strong>Limitations</strong>:
+                  Although the study shows an actual picture of real-world practice, the suboptimal titration of BI/FRC
+                  could represent a limitation for a fully reliable evaluation of the impact of the three
+                  intensification strategies when used appropriately.<sup
+                    style="vertical-align:top;margin-top:0;line-height:10px;">1</sup>
+                </p>
+              </td>
+              <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px;" class="table">
+            <tr>
+              <td height="22.5" style="font-size:20px;line-height:20px;"></td>
+            </tr>
+            <tr>
+              <td align="center" style="text-align: center;">
+                <img
+                  src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgreen-line.png"
+                  alt="line" width="580" height="1" border="0" class="fluid">
+              </td>
+            </tr>
+            <tr>
+              <td height="22.5" style="font-size:20px;line-height:20px;"></td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" class="table">
+                  <tr>
+                    <td>
+                    </td>
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td height="5" style="font-size:5px;line-height:5px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+                                <td class="mobileHide">
+                                  <img align="center" width="580"
+                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Ficon-dollars.png"
+                                    style="max-width:580px;display:block;text-align:center;border:0;"
+                                    alt="Toujeo is capped" />
+                                </td>
+                                <td width="10" style="line-height: 10px; font-size: 10px;" class="mobileHide"></td>
+                              </tr>
+
+                              <tr>
+                                <td width="0" valign="top" class="mobileShow"
+                                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                  <table cellpadding="0" cellspacing="0" width="100%">
+
+                                    <tr>
+                                      <td class="mobileShow" align="center"
+                                        style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                        <img align="center"
+                                          src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fm-icon-dollars.png"
+                                          alt="Do you know the Full Toujeo Max Story ?"
+                                          style="display: block; text-align: center; border: 0px; max-width: 100%;" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--CTA 1-->
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF" style="max-width:600px; " class="table">
+            <tr>
+              <td height="10" style="font-size:10px;line-height:10px;">
+              </td>
+            </tr>
+            <tr class="mobileHide">
+              <td align="center">
+                <a href="https://www.toujeopro.com/savings-and-coverage" target="_blank">
+                  <img
+                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fcta-button.png"
+                    alt="Learn about savings and coverage" width="400" height="48" border="0" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td height="20" style="font-size:20px;line-height:20px;">
+              </td>
+            </tr>
+            <tr>
+              <td width="0" valign="top" class="mobileShow"
+                style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="mobileShow" align="center"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                      <a href="https://www.toujeopro.com/solostar-insulin-pens" target="_blank">
+                        <img
+                          src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fmobile-cta.png"
+                          width="96%" height="auto" alt="Learn about high-capacity pens"
+                          style="display: block; padding: 0px; text-align: center; border: 0px;" />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" style="font-size:20px;line-height:20px;">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="mobile-pl-12">
+                <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 14px;">
+                  <span
+                    style="margin-left: -7px; display: inline-block;margin-top: 2px;vertical-align: top;padding-left: 15px;line-height: 10px;"><sup>‡</sup></span>Eligibility
+                  Restrictions and Offer Terms apply.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td height="20" style="font-size:20px;line-height:20px;"></td>
+            </tr>
+          </table>
+          <!-- MAIN COPY 2 -->
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff"
+            style="max-width:600px;background-color:#ffffff;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="mobileHide" bgcolor="#F0F0F0" style="background-color:#F0F0F0;">
+                            <img style="height: 12px"
+                              src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader.png"
+                              alt="" width="600" height="12" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="0" valign="top" class="mobileShow"
+                            style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="mobileShow" align="center"
+                                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;float:left;background-color:#F0F0F0;">
+                                  <img align="center"
+                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader-mobile.png"
+                                    alt="Do you know the Full Toujeo Max Story ?" width="100%" height="auto"
+                                    style="display: block; text-align: center; border: 0px;height: 10px" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="8" style="font-size:8px;line-height:8px;background-color:#F0F0F0;"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#F0F0F0"
+            style="max-width:600px;background-color:#F0F0F0;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#F0F0F0" class="table">
+                  <tr>
+                    <td>
+                      <table cellpadding="0" cellspacing="0" width="100%" style="background-color:#F0F0F0;">
+                        <tr>
+                          <td height="5" style="font-size:5px;line-height:5px;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10" style="font-size:10px;line-height:10px;background-color:#F0F0F0">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left"
+                            style="font-family:Arial,sans-serif;line-height:21px;color:#461e6c;font-size: 20px;font-weight: bold;background-color:#F0F0F0;padding-left: 10px;padding-right: 10px;"
+                            class="mobile-pl-12 mobile-pr-12">
+                            Improved glycemic control was observed in insulin-naive patients with T2DM when Toujeo was
+                            added<sup style="font-size: 10px;line-height:0px;">2</sup>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10" style="font-size:10px;line-height:10px;">
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="" class="mobile-pl-12 mobile-pr-75"
+                                  style="font-family:Arial,sans-serif;font-size:16px;line-height:19px;color:#1FA71C;padding-left: 12px;">
+                                  <strong>-0.97% reduction in A1C:</strong> Mean baseline of 9.16% to mean follow-up of
+                                  8.16%<sup style="font-size:8px;">2</sup>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="30" style="font-size:10px;line-height:10px;">
+                                </td>
+                              </tr>
+                              <td width="25">
+                              </td>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="text-align: center;background-color:#F0F0F0;" class="mobileHide">
+                <img width="100%" align="center"
+                  src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph1A.png"
+                  alt="GLP Grapħ" style="max-width: 100%;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width="0" valign="top" class="mobileShow"
+                style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#F0F0F0;"
+                class="mobile-pl-12 mobile-pr-12">
+                <img width="94%" align="center"
+                  src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph1B.png"
+                  alt="GLP Grapħ" style="max-width: 94%;margin-top:30px;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width="0" valign="top" class="mobileShow"
+                style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#F0F0F0;"
+                class="mobile-pl-12 mobile-pr-12">
+                <img width="94%" align="center"
+                  src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fm-graph1C.png"
+                  alt="GLP Grapħ" style="max-width: 94%;margin-top:60px;">
+              </td>
+            </tr>
+          </table>
+          <table cellpadding="0" cellspacing="0" width="600" bgcolor="#FFFFFF"
+            style="width:600px;background-color:#F0F0F0;" class="table">
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="600" class="table">
+                  <tr>
+                    <td>
+                  <tr>
+                    <td align="left" class="mobile-pl-12 mobile-pr-12"
+                      style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#1A1A1A;margin-top:15px;background-color:#F0F0F0;padding-left:10px">
+                      <div style="margin-top: 15px;">Hypoglycemia is the most common adverse event associated with
+                        insulin-containing therapies.<sup>3</sup>
+                      </div>
+                      <div style="margin-top: 15px">Observed in a retrospective analysis of US EMRs following treatment
+                        intensiﬁcation with Toujeo in adults inadequately controlled on a GLP-1 RA ± OAD therapy who had
+                        ≥6 months of follow-up data (N=271).<sup>2</sup><sup>§</sup>
+                        <p
+                          style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 10px;margin-top: 15px;margin-left:-1px;">
+                          <span style="display: inline-block; vertical-align: top;"><sup
+                              style="margin-left: -4px; ">&sect;</sup></span>Follow-up period ≥6 months included a GLP-1
+                          RA + Toujeo (N=271).<sup>2</sup>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+              </td>
+            </tr>
+            <tr>
+              <td align="left"
+                style="font-family:Arial,sans-serif;line-height:14px;color:#461e6c;font-size: 14px;font-weight: bold; padding-top: 15px;margin-bottom:5px;background-color:#F0F0F0;padding-left:10px;"
+                class="mobile-pl-12 mobile-pr-12">DELIVER G STUDY DESIGN
+              </td>
+            </tr>
+            <tr>
+              <td align="left" style="padding-left:10px;padding-right:10px;" class="mobile-pl-12 mobile-pr-12">
+                <div
+                  style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#1A1A1A;padding-top: 5px;background-color:#F0F0F0;margin: 0;">
+                  DELIVER G was a retrospective pre-post study of 271 adult patients with T2DM receiving GLP-1 RA
+                  therapy who were
+                  insulin-naive prior to treatment intensification with Gla-300. DELIVER G included data from a large US
+                  EMR data
+                  source (IBM<sup>&reg;</sup> Explorys).<sup>2</sup>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" style="background-color:#F0F0F0;padding-right:10px;padding-top:5px;">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px; padding-left: 10px;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem;line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            In the ≥12-month pre-Gla-300 period, 271 patients received a GLP-1 RA–based regimen ±
+                            OAD(s)<sup>2</sup>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-left: 10px;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            In the ≥6-month follow-up period, 271 patients received a GLP-1 RA + Gla-300<sup>2</sup>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="left"
+                style="font-family:Arial,sans-serif;line-height:14px;color:#1FA71C;font-size:14px;font-weight:bold;text-transform:uppercase;background-color:#F0F0F0;padding-left:10px;padding-top:15px;margin-bottom:5px"
+                class="mobile-pl-12 mobile-pr-12">
+                Eligibility criteria
+              </td>
+            </tr>
+            <tr>
+              <td align="left" style="background-color:#F0F0F0;padding-right:10px;padding-top:5px;">
+
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px; padding-left: 10px;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            Adults with
+                            a diagnosis of T2DM receiving GLP-1 RA therapy that was intensified by adding Gla-300
+                            between March 1,
+                            2015 and September 30, 2019<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-left: 10px;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            Insulin
+                            naive prior to treatment intensification; ≥12 months of pre–Gla-300 data and ≥6 months of
+                            follow-up data
+                            available; A1C 3%-15%, recorded in the 6 months prior to intensification with Gla-300 and 3
+                            to 9 months
+                            after intensification<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="left"
+                style="font-family:Arial,sans-serif;line-height:14px;color:#461e6c;font-size:14px;font-weight:bold;text-transform:uppercase;background-color:#F0F0F0;padding-left:10px;padding-top:15px;margin-bottom:5px"
+                class="mobile-pl-12 mobile-pr-12">
+                LIMITATIONS FOR DELIVER G
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-left: 10px;padding-top:5px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            Results should be interpreted with caution because of the retrospective pre-post design
+                            without a control or comparator arm and the relatively short follow-up (6
+                            months)<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;padding-right:10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            Hypoglycemia may have been underreported, as only the clinically significant events were
+                            likely to have been captured (eg, no SMBG or CGM data)<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            EMR database analysis has a potential for selection bias that cannot be controlled, as well
+                            as EMR data-capture challenges (eg, coding errors, no dosing data)<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            Patients were mainly from the Northwest and Southern US and therefore may not be
+                            representative of the US national landscape<sup>2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;font-weight:bold;">
+                            Sanofi-sponsored study<sup style="font-weight: bold;">2</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center">
+                      <table cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="mobileHide">
+                                  <img
+                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader.png"
+                                    style="height:10px" alt="" width="600" height="10" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="0" valign="top" class="mobileShow" bgcolor="#F0F0F0"
+                                  style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                  <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td class="mobileShow" align="center" bgcolor="#F0F0F0"
+                                        style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#F0F0F0;">
+                                        <img align="center"
+                                          src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fheader-mobile.png"
+                                          height="12" alt="Do you know the Full Toujeo Max Story ?" width="100%"
+                                          style="display: block;text-align: center; border: 0px;height:12px;" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="8" bgcolor="#ffffff"
+                                  style="font-size:8px;line-height:8px;background-color:#ffffff;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" class="table"
+                        style="background-color: #ffffff;">
+                        <tr>
+                          <td>
+                            <table cellpadding="0" bgcolor="#ffffff" cellspacing="0" width="100%"
+                              style="background-color:#ffffff;">
+                              <tr>
+                                <td height="5" bgcolor="#ffffff"
+                                  style="font-size:5px;line-height:5px;background-color:#ffffff;">
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td height="10" bgcolor="#ffffff"
+                                  style="font-size:10px;line-height:10px;background-color:#ffffff;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" bgcolor="#ffffff"
+                                  style="font-family:Arial,sans-serif;line-height:21px;color:#461e6c;font-size: 22px;font-weight: bold;padding-left:10px;padding-right:10px;background-color: #ffffff;"
+                                  class="mobile-pl-12 mobile-pr-12">The results from DELIVER G support the EDITION 3<br
+                                    class="mobileHide" /> pivotal study
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5" bgcolor="#ffffff"
+                                  style="font-size:5px;line-height:5px;background-color:#ffffff;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table cellpadding="0" cellspacing="0" width="100%" bgcolo="#ffffff"
+                                    style="background-color: #ffffff;">
+                                    <tr>
+                                      <td align="left" bgcolor="#ffffff" class="mobile-pl-12 mobile-pr-75"
+                                        style="font-family:Arial,sans-serif;font-size:16px;line-height:19px;color:#1FA71C;font-weight:bold;padding-left:10px;padding-right:10px;background-color: #ffffff;">
+                                        EDITION 3 (N=862)<sup>4</sup>
+                                      </td>
+                                    </tr>
+                                    <td width="25">
+                                    </td>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#ffffff"
+                      style="font-size:30px;line-height:30px;background-color: #ffffff;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#ffffff" style="text-align: center;background-color: #ffffff;"
+                      class="mobileHide">
+                      <img width="580" align="center"
+                        src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph2A.png"
+                        alt="GLP Grapħ" style="max-width:580px">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#ffffff" width="0" valign="top" class="mobileShow"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#ffffff;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <img width="94%" align="center"
+                        src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph-m-A1C.png"
+                        alt="GLP Grapħ" style="max-width: 94%;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" width="0" valign="top" class="mobileShow" bgcolor="#ffffff"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#ffffff;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <img width="94%" align="center"
+                        src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph-m-incidence.png"
+                        alt="GLP Grapħ" style="max-width: 94%;margin-top:60px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" width="0" valign="top" class="mobileShow" bgcolor="#ffffff"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#ffffff;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <img width="94%" align="center"
+                        src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fgraph-m-severe.png"
+                        alt="GLP Grapħ" style="max-width: 94%;margin-top:60px;">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="8" bgcolor="#ffffff" style="font-size:8px;line-height:8px;background-color: #ffffff;"></td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <div
+                  style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#1A1A1A;margin-top: 25px;font-weight:bold;">
+                  Most common adverse reactions (≥5%) with Toujeo in patients with T2DM were nasopharyngitis <br /><span
+                    style="white-space:nowrap;">(7.1%)</span> and upper respiratory tract infection (5.7%).<sup>4</sup>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px; padding-top: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            In all the EDITION studies, Toujeo met the primary endpoint (noninferiority in A1C) at 26
+                            weeks<sup>4</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            In clinical studies, Toujeo patients used more basal insulin than Lantus patients (11%-15%
+                            in T2DM, 18% in T1DM)<sup>4II</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A; padding-bottom: 10px;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td valign="top" width="10" style="color: #1FA71C; font-size: 1rem; line-height: 14px;">&bull;
+                          </td>
+                          <td valign="top"
+                            style="font-family: Arial, sans-serif; font-size: 12px; line-height: 14px; color: #1A1A1A;">
+                            To minimize the risk of hypoglycemia, titrate the dose of Toujeo no more frequently than
+                            every 3 to 4 days<sup>4</sup></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <div
+                  style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#1A1A1A;margin-top: 5px;">
+                  <span style="font-weight:bold;">EDITION 3 STUDY DESIGN:</span> A 26-week, open-label,
+                  controlled, titrate-to-target, noninferiority study in adults with diabetes not at A1C goal
+                  (range: 7%-11%) randomized to Toujeo or Lantus once daily. All patients were titrated to an FPG
+                  goal of 80-100 mg/dL (T2DM).<sup>4,5</sup>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <p
+                  style="font-family: Arial, Helvetica, sans-serif;font-size:10px;line-height:10px;margin-top:15px;margin-bottom:15px;">
+                  <span style="display: inline-block; vertical-align: top;">
+                    <sup style="margin-left: -4px; ">II</sup></span>Mean baseline A1C 8.49% for Toujeo, 8.58% for
+                  Lantus.<sup>4</sup>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <div
+                  style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#1A1A1A;margin-top: 5px;">
+                  A1C, glycated hemoglobin; BI, basal insulin; CGM, continuous glucose monitoring; EMR, electronic
+                  medical records; FRC,
+                  fixed-ratio combinations; GLP-1 RA, glucagon-like peptide-1 receptor agonist; OAD, oral
+                  antidiabetic drug; PPPY, per patient per year; SMBG, self-monitoring blood glucose; T1DM, type 1
+                  diabetes mellitus; T2DM,
+                  type 2 diabetes mellitus.
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="background-color: #ffffff;padding-left:10px;padding-right:10px;"
+                class="mobile-pl-12 mobile-pr-12">
+                <div
+                  style="font-family:Arial,sans-serif;font-size:10px;line-height:12px;color:#1A1A1A;margin-top: 25px;">
+                  <span style="font-weight:bold;"><sup style="margin-left: -5px;">‡</sup>Eligibility Restrictions &
+                    Offer Terms:<br />Sanofi Insulins Co-pay Savings Program: This savings program is not
+                    insurance.</span>
+                  For a complete list of participating brands, products, and National Drug Codes (NDCs) <a
+                    href="https://qrfy.com/api/storage/gcs/pdf/qrfyprod/9fb42b6f-b2d3-4339-8f3f-e03d9f7e8bfc.pdf"
+                    target="_blank" style="color:#1FA71C;text-decoration:underline;">Click Here</a>. This offer is not
+                  valid for prescriptions covered by or submitted for reimbursement, in
+                  whole or in part, under Medicare, Medicaid, VA, DOD, TRICARE, similar federal or state programs,
+                  including any state pharmaceutical programs. If you have an Affordable Care (Health Care
+                  Exchange) plan, you may still be qualified to receive and use this savings card. Please note:
+                  the Federal Employees Health Benefits (FEHB) Program is not a federal or state government health
+                  care program for purposes of the savings program. Void where prohibited by law. For the duration
+                  of the program, eligible commercially insured patients pay no more than $35 per 30-day supply,
+                  up to 10 packs per fill; Offer valid for one fill every 30 days. Savings may vary depending on
+                  patients’ out-of-pocket costs. The Sanofi Insulins Co-pay Savings Program applies to the cost of
+                  medication. There are other relevant costs associated with overall treatment. Sanofi reserves
+                  the right to rescind, revoke, terminate, or amend this offer, eligibility, and terms of use at
+                  any time without notice. Upon registration, patients will receive all program details. For
+                  questions regarding your eligibility or benefits, or if you wish to discontinue your
+                  participation, call the Sanofi Insulins Co-pay Savings Program at (866) 255-8661 (8:00 am-8:00
+                  pm EST, Monday-Friday).
+
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td height="20" bgcolor="#ffffff" style="font-size:20px;line-height:20px;background: #ffffff;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:18px;line-height:20px;color:#461e6c; font-weight: bold;padding-left:10px;padding-right:10px;background-color: #ffffff;">
+                Indication
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;background-color: #fff;">
+                Toujeo
+                is a long-acting human insulin analog indicated to improve glycemic control in adults and
+                pediatric patients 6 years and older with diabetes mellitus.
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Limitations of Use: Toujeo is not recommended for the treatment of diabetic ketoacidosis.
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td height="5" bgcolor="#ffffff" style="font-size:5px;line-height:5px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:18px;line-height:20px;color:#461e6c; font-weight: bold;padding-left:10px;padding-right:10px;background-color: #ffffff;">
+                Important Safety Information for Toujeo U-300 (insulin glargine) injection
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;padding-right:10px;">
+                <strong>Contraindications</strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Toujeo
+                is contraindicated during episodes of hypoglycemia and in patients hypersensitive to insulin
+                glargine or any of the excipients in Toujeo.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:  Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;padding-right:10px;">
+                <strong>Warnings and Precautions</strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Toujeo
+                contains the same active ingredient, insulin glargine, as Lantus. The concentration of
+                insulin glargine in Toujeo is 300 units per mL (U-300).
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family: Arial,sans-serif;font-size:12px;font-weight:bold;line-height:18px;color:#333333;padding-left:10px;padding-right:10px;">
+                <strong>Insulin pens and needles must never be shared between patients. Do NOT reuse
+                  needles.
+                </strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Monitor blood glucose in all patients treated with insulin. Modify insulin regimens only
+                under medical supervision. Changes in insulin regimen, strength, manufacturer, type,
+                injection site or method of administration may result in the need for a change in insulin
+                dose or an adjustment in concomitant oral antidiabetic treatment. Changes in insulin regimen
+                may result in hyperglycemia or hypoglycemia. Dosage adjustments are recommended to lower the
+                risk of hypoglycemia when switching patients to Toujeo from another insulin therapy.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Repeated insulin injections into areas of lipodystrophy or localized cutaneous amyloidosis
+                may result in hyperglycemia; sudden change in the injection site (to unaffected area) has
+                been reported to result in hypoglycemia. Advise patients to rotate injection site to
+                unaffected areas and closely monitor for hypoglycemia.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Unit for unit, patients started on, or switched to, Toujeo required a higher dose than patients
+                controlled with Lantus. When switching from another basal insulin to Toujeo, patients
+                experienced higher average fasting plasma glucose levels in the first few weeks of therapy
+                until titrated to their individualized fasting plasma glucose targets. Higher doses were
+                required in titrate-to-target studies to achieve glucose control similar to Lantus.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Hypoglycemia is the most common adverse reaction in patients treated with Toujeo and may be
+                life-threatening. The long-acting effect of Toujeo may delay recovery from hypoglycemia
+                compared to shorter-acting insulins.
+
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Medication errors that may lead to hypoglycemia, such as accidental mix-ups between insulin
+                products, have been reported. Patients should be instructed to always verify the insulin
+                label before each injection.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Do not
+                dilute or mix Toujeo with any other insulin or solution. If mixed or diluted, the solution
+                may become cloudy, and the onset of action/time to peak effect may be altered in an
+                unpredictable manner. Do not administer Toujeo via an insulin pump or intravenously because
+                severe hypoglycemia can occur.
+
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Severe, life-threatening, generalized allergy, including anaphylaxis, can occur. Discontinue
+                Toujeo, monitor, and treat if indicated.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                A reduction in the Toujeo dose may be required in patients with renal or hepatic impairment.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                All
+                insulins, including Toujeo, can lead to life-threatening hypokalemia. Untreated hypokalemia
+                may cause respiratory paralysis, ventricular arrhythmia, and death. Closely monitor
+                potassium levels in patients at risk of hypokalemia and treat if indicated.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Fluid
+                retention, which may lead to or exacerbate heart failure, can occur with concomitant use of
+                thiazolidinediones (TZDs) with insulin. These patients should be observed for signs and
+                symptoms of heart failure. If heart failure occurs, dosage reduction or discontinuation of
+                TZD must be considered.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:  Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;padding-right:10px;">
+                <strong>Drug Interactions</strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Certain drugs may affect glucose metabolism, requiring insulin dosage adjustment and close
+                monitoring of blood glucose. The signs of hypoglycemia may be reduced in patients taking
+                anti-adrenergic drugs (e.g., beta-blockers, clonidine, guanethidine, and reserpine).
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:  Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;padding-right:10px;">
+                <strong>Adverse Reactions</strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Adverse reactions commonly associated with Toujeo include hypoglycemia, hypersensitivity
+                reactions, injection site reactions, lipodystrophy, pruritus, rash, edema, and weight gain.
+              </td>
+            </tr>
+            <tr>
+              <td height="10" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:18px;line-height:20px;color:#461e6c; font-weight: bold;padding-left:10px;padding-right:10px;background-color: #ffffff;">
+                <strong>Important Safety Information for Toujeo U-300 (insulin glargine) injection SoloStar and Toujeo
+                  Max SoloStar</strong>
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Toujeo
+                SoloStar and Toujeo Max SoloStar are single-patient-use prefilled insulin pens. To help
+                ensure an accurate dose each time, patients should follow all steps in the Instruction
+                Leaflet accompanying their pen; otherwise, they may not get the correct amount of insulin,
+                which may affect their blood glucose levels. It is especially important to perform a safety
+                test when a patient is using a new pen for the first time.
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-left:10px;padding-right:10px;">
+                Do not
+                withdraw Toujeo from the SoloStar and Max SoloStar single-patient-use prefilled pens with a
+                syringe.
+              </td>
+            </tr>
+            <tr>
+              <td height="15" bgcolor="#ffffff" style="font-size:15px;line-height:15px;"></td>
+            </tr>
+            <tr>
+              <td align="left" class="mobile-pl-12 mobile-pr-12" bgcolor="#ffffff"
+                style="font-family:  Arial,sans-serif;font-size:12px;line-height:14px;color:#441E6C;padding-left:10px;padding-right:10px;">
+                <a href="https://products.sanofi.us/toujeo/toujeo.pdf"
+                  style="color:#441E6C; text-decoration:  underline !important;" target="_blank"><u><strong>Click here
+                      for full Prescribing Information.</strong></u></a>
+              </td>
+            </tr>
+            <tr>
+              <td height="30" bgcolor="#ffffff" style="font-size:10px;line-height:10px;"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" class="mobile-pl-12 mobile-pr-12"
+          style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;background-color: #ffffff;padding-left:10px;padding-right:10px;">
+          <strong>Please let me know if you have any questions.</strong>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          <table cellpadding="0" cellspacing="0" width="100%" class="table">
+            <tr>
+
+              <td>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td height="20" style="font-size:20px;line-height:20px;"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" class="mobileFont14px mobile-pl-12"
+                      style="font-family:Arial,sans-serif;font-size:16px;line-height:21px;color:#461e6c;padding-left:10px;padding-right:10px;">
+                      {{customText[]}}{{customText[Regards|Sincerely|Thank you|Thanks|]}},
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="10" style="font-size:10px;line-height:10px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" class="mobileFont14px mobile-pl-12"
+                      style="font-family:Arial,sans-serif;font-size:16px;line-height:21px;color:#209b42; font-weight: bold;padding-left:10px;padding-right:10px;">
+                      {{userName}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" class="mobileFont14px mobile-pl-12"
+                      style="font-family:Arial,sans-serif;font-size:16px;line-height:17px;color:#209b42;padding-left:10px;padding-right:10px;">
+                      <a href="mailto:{{User.SANOFI_Email__c}}" style="color:#209b42;">{{User.SANOFI_Email__c}}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" class="mobileFont14px mobile-pl-12"
+                      style="font-family:Arial,sans-serif;font-size:16px;line-height:17px;color:#209b42;padding-left:10px;padding-right:10px;">
+                      <a href="tel:{{User.MobilePhone}}" style="color:#209b42;">{{User.MobilePhone}}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="20" style="font-size:20px;line-height:20px;"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" bgcolor="#ffffff"
+                      style="text-align: center;background-color: #ffffff;padding-left:10px;padding-top:15px" class="mobileHide">
+                      <a href="https://diabetes-dot-vci-live.uc.r.appspot.com/callform?brandname=toujeo"
+                        target="_blank">
+                        <img width="201" align="left"
+                          src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fcta-request.png"
+                          alt="GLP Grapħ" style="max-width: 201px" />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" bgcolor="#ffffff" width="0" valign="top" class="mobileShow"
+                      style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;background-color:#ffffff;"
+                      class="mobile-pl-12 mobile-pr-12">
+                      <img width="94%" align="center"
+                        src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fm-cta.png"
+                        alt="GLP Grapħ" style="max-width: 94%;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF" class="table">
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td height="20" style="font-size:20px;line-height:20px;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;padding-bottom: 17px;padding-left:10px;">
+                                  <strong>References:</strong> <strong> 1.</strong>&nbsp;Candido R, Nicolucci A, Larosa
+                                  M,
+                                  Rossi MC,
+                                  Napoli R; on behalf of RESTORE-G (Retrospective analysis on the therapeutic approaches
+                                  after GLP-1
+                                  RA treatment in type 2 diabetes patients) Study Group. <em>Nutrition Metab Cardiovasc
+                                    Dis</em>.
+                                  2023;33(11):2294-2305. <a
+                                    href="https://www.nmcd-journal.com/action/showPdf?pii=S0939-4753%2823%2900294-6"
+                                    target="_blank"
+                                    style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;">doi.org/10.1016/j.numecd.2023.07.025&nbsp;</a><strong>2.</strong>&nbsp;Data
+                                  on file,
+                                  Sanofi 2022. Study Report (DELIVER G).<strong> 3.</strong>&nbsp;Diabetes UK. Side
+                                  effects of
+                                  insulin. Last reviewed September 29, 2022. Accessed April 30, 2024.
+                                  <a href="https://www.diabetes.org.uk/guide-to-diabetes/managing-your-diabetes/treating-your-diabetes/insulin/side-effects"
+                                    style="font-family:Arial,sans-serif;font-size:12px;line-height:14px;color:#333333;">https://www.diabetes.org.uk/guide-to-diabetes/managing-your-diabetes/treating-your-diabetes/insulin/side-effects</a>
+                                  <strong> 4.</strong>&nbsp;Toujeo Prescribing Information.
+                                  <strong>5.</strong>&nbsp;Bolli GB, Riddle MC, Bergenstal RM, et al; on behalf of
+                                  EDITION 3 study investigators. New insulin glargine
+                                  300 U/ml compared with glargine 100 U/ml in insulin-naïve people with type 2 diabetes
+                                  on oral glucose-lowering drugs: a randomized controlled trial (EDITION 3).
+                                  <em>Diabetes Obese Metab</em>.
+                                  2015;17(4):386-394. <strong> 6.</strong>&nbsp;Bolli GB, Riddle MC, Bergenstal RM, et
+                                  al;
+                                  on behalf of EDITION 3 study investigators. New insulin glargine 300 U/ml compared
+                                  with glargine 100 U/ml in
+                                  insulin-naïve people with type 2 diabetes on oral glucose-lowering drugs: a randomized
+                                  controlled trial (EDITION 3) [supplement]. <em>Diabetes Obese Metab</em>.
+                                  2015;17(4):386-394.
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="25" class="mobileWidth10px">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="background-color:#F0F0F0;">
+                      <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#F0F0F0" class="table"
+                        style="background-color:#F0F0F0;">
+                        <tr>
+                          <td align="center">
+                            <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#F0F0F0" class="table">
+                              <tr>
+                                <td>
+                                  <table cellpadding="0" cellspacing="0" width="100%" class="table">
+                                    <tr>
+                                      <td align="center" class="mobile-pl-12"
+                                        style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#333333;padding-left:10px;padding-right:10px;padding-top:50px;">
+                                        <p style="text-align:center;padding-bottom:15px;">Your feedback is important to
+                                          us. To help us improve our offering, you are invited to respond to the
+                                          question
+                                          below and complete a short survey.</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" style="height:15px;line-height:15px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" class="mobile-pl-12"
+                                        style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#333333;padding-left:10px;padding-right:10px;">
+                                        <p
+                                          style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#333333;">
+                                          How relevant is the content of this email to you?</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" style="height:15px;line-height:15px;"></td>
+                                    </tr>
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                      <tr>
+                                        <td width="10" style="line-height:10px;font-size:10px;text-align:center;"
+                                          class="mobileHide"></td>
+                                        <td align="center" style="text-align:center;" class="mobileHide">
+                                          <a style="text-align:center;"
+                                            href="https://sanofidigital.iad1.qualtrics.com/jfe/form/SV_1Bp1HEewxrBQEku?Country=US&Q_Language=EN&Brand=Toujeo&Function=Commercial&R=5"
+                                            target="_blank">
+                                            <img width="520" align="center"
+                                              src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fquiz-placeholder.png"
+                                              alt="quiz"
+                                              style="display:block;text-align:center;border:0;max-width:520px;margin:0 auto;" />
+                                          </a>
+                                        </td>
+                                        <td width="10" style="line-height:10px;font-size:10px;" class="mobileHide"></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="0" valign="top" class="mobileShow"
+                                          style="width:0;max-height:0;font-size: 0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                          <table cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                              <td class="mobileShow" align="center"
+                                                style="width:0;max-height:0;font-size:0;line-height:0;mso-hide:all;display:none;overflow:hidden;">
+                                                <a href="https://sanofidigital.iad1.qualtrics.com/jfe/form/SV_1Bp1HEewxrBQEku?Country=US&Q_Language=EN&Brand=Toujeo&Function=Commercial&R=5"
+                                                  target="_blank">
+                                                  <img align="center"
+                                                    src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fm-quiz-placeholder.png"
+                                                    alt="quiz"
+                                                    style="display: block; text-align: center; border: 0px; max-width:320px" />
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#F0F0F0" class="table">
+                              <tr>
+                                <td>
+                                  <table cellpadding="0" cellspacing="0" width="100%" class="table">
+                                    <tr>
+                                      <td align="left" class="mobile-pl-12 mobile-pr-12"
+                                        style="font-family:Arial,sans-serif;font-size:16px;line-height:18px;font-weight:bold;color:#333333;padding-top:38px;padding-left:10px;padding-right:10px;">
+                                        <strong>Prescribers and other Healthcare Professionals may click <a
+                                            href="https://www.sanofi.us/en/products-and-resources"
+                                            style="font-family:Arial,sans-serif;font-size:16px;line-height:18px;font-weight:bold;color:#209b42;text-decoration:underline;"
+                                            target="_blank">here</a> for State Price Disclosure Information or go to: <a
+                                            href="https://www.sanofi.us/en/products-and-resources"
+                                            style="font-family:Arial,sans-serif;font-size:16px;line-height:18px;color:#333333;text-decoration:none;"
+                                            target="_blank">https://www.sanofi.us.en/products-and-resources</a>
+                                        </strong>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#F0F0F0" class="table">
+                              <tr>
+                                <td align="left" style="padding-left:10px" class="mobile-pl-12">
+                                  <a href="https://www.sanofi.us/en" target="_blank">
+                                    <img
+                                      src="https://eoa-editor.s3.amazonaws.com/ec3f9ad52c27dc81e5a7a7ca0ceb139bdb7b4c54%2FToujeo%2Fsanofi-logo.png"
+                                      alt="Sanofi logo" class="mobileLogo" width="181" height="83" border="0">
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="2" style="font-size:2px;line-height:2px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  Sanofi
+                                  US </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  55
+                                  Corporate Drive </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  Bridgewater, NJ 08807 </td>
+                              </tr>
+                              <tr>
+                                <td height="15" style="font-size:15px;line-height:15px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;padding-left:10px;">
+                                  &copy;
+                                  2024 Sanofi. All rights reserved. </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  <a href="https://www.sanofi.us/en/legal-notice/" target="_blank"
+                                    style="color:#209b42; text-decoration: underline !important;"><u>Legal
+                                      Disclaimer</u></a> and <a
+                                    href="https://www.sanofi.us/en/legal-notice#Privacypolicy" target="_blank"
+                                    style="color:#209b42; text-decoration: none !important; "><u>Privacy
+                                      Policy</u></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" style="font-size:15px;line-height:15px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  Questions or comments? Click <a href="https://www.sanofi.us/en/contact-us"
+                                    target="_blank" style="color:#209b42;text-decoration:none;"><u>here</u></a> to
+                                  contact
+                                  us.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  This
+                                  email is intended for use by US residents only.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" style="font-size:15px;line-height:15px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:18px;color:#333333;padding-left:10px;">
+                                  You may <a href="https://unsubscribe.sanofi.us/" target="_blank"
+                                    style="color:#209b42;"><u>unsubscribe</u></a> from Sanofi or call 1-800-633-1610.
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" style="font-size:15px;line-height:15px;"></td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="mobile-pl-12"
+                                  style="font-family:Arial,sans-serif;font-size:14px;line-height:17px;color:#333333;padding-left:10px;">
+                                  MAT-US-2403540-v1.0-04/2024
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="20" style="font-size:20px;line-height:20px;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
