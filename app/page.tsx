@@ -5,6 +5,8 @@ import Link from "next/link";
 import styles from "./home.module.css";
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from "framer-motion";
 
 const imageSources: string[] = [
   "/images/cover-superhero.jpg",
@@ -15,6 +17,8 @@ const imageSources: string[] = [
   "/images/cover-cube.png",
   "/images/cover-san-email.png",
   "/images/cover-ins-email.png",
+  "/images/cover-ins-email.png",
+  "/images/cover-ins-email.png",
 ];
 
 const imageRoutes: string[] = [
@@ -22,11 +26,25 @@ const imageRoutes: string[] = [
   "/bandstats",
   "/solarSearch",
   "/eyewave",
-  "/banners",
   "/multiCube",
+  "/banners/index.html",
   "/emails/santou/index.html",
-  "/emailInsBe",
+  "/emails/insBE/index.html",
+  "/banners/lum/index.html",
+  "/banners/lum/index.html",
 ];
+
+// const imageRoutes: string[] = [
+//   "/superheroSearch",
+//   "/bandstats",
+//   "/solarSearch",
+//   "/eyewave",
+//   "/banners",
+//   "/multiCube",
+//   "/emails/santou",
+//   "/emails/insBE",
+//   "/banners/lum",
+// ];
 
 const imageTitles: string[] = [
   "Hero Search",
@@ -37,6 +55,8 @@ const imageTitles: string[] = [
   "Multi Cube",
   "San Email",
   "Ins Email",
+  "Lum Banners",
+  "Lum Banners",
 ];
 
 const imageDescriptions: string[] = [
@@ -48,6 +68,8 @@ const imageDescriptions: string[] = [
   "Play with cubes",
   "Manage San emails",
   "Handle Ins emails",
+  "Lum Banners",
+  "Lum Banners",
 ];
 
 const Home: React.FC = () => {
@@ -82,23 +104,29 @@ const Home: React.FC = () => {
     <main className={styles.main}>
       <div className={styles.center}>
         <div className={styles.description}>
-          <div className={styles.imgCon}>
-            <a
-              href="https://brainhaxmedia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
-              {/* <Image
-                src="/images/logo512.png"
-                alt="Brainhaxmedia Logo"
-                className={styles.logo}
-                fill
-                priority
-              /> */}
-            </a>
-            <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;</span><code className={styles.code}>Senior Interactive Developer</code>
-          </div>
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className={styles.imgCon}>
+                  <a
+                    href="https://brainhaxmedia.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
+                  </a>
+                  <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={styles.code}>Senior Interactive Developer</code></span>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    Hello, Framer Motion!
+                  </motion.div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
         {imageSources.map((src, index) => (
           <div
