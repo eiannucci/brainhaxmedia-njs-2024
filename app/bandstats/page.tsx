@@ -33,8 +33,6 @@ const BandStats: React.FC = () => {
   const [bands, setBands] = useState<Band[]>([]);
   const [loading, setLoading] = useState(true);
 
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {

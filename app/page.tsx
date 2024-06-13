@@ -26,8 +26,8 @@ const imageRoutes: string[] = [
   "/bandstats",
   "/solarSearch",
   "/eyewave",
-  "/multiCube",
   "/banners/index.html",
+  "/multiCube",
   "/emails/santou/index.html",
   "/emails/insBE/index.html",
   "/banners/lum/index.html",
@@ -116,13 +116,13 @@ const Home: React.FC = () => {
                     <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
                   </a>
                   <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={styles.code}>Senior Interactive Developer</code></span>
-                  <motion.div
+                  {/* <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
                     Hello, Framer Motion!
-                  </motion.div>
+                  </motion.div> */}
                 </div>
               </Col>
             </Row>
