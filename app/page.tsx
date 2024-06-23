@@ -12,26 +12,26 @@ const imageSources: string[] = [
   "/images/cover-superhero.jpg",
   "/images/cover-bandstats.jpg",
   "/images/cover-solarsearch.jpg",
-  "/images/cover-eyewave.jpg",
-  "/images/cover-banners.png",
+  // "/images/cover-eyewave.jpg",
+  // "/images/cover-banners.png",
   "/images/cover-cube.png",
-  "/images/cover-san-email.png",
-  "/images/cover-ins-email.png",
-  "/images/cover-ins-email.png",
-  "/images/cover-ins-email.png",
+  // "/images/cover-san-email.png",
+  // "/images/cover-ins-email.png",
+  // "/images/cover-ins-email.png",
+  // "/images/cover-ins-email.png",
 ];
 
 const imageRoutes: string[] = [
   "/superheroSearch",
   "/bandstats",
   "/solarSearch",
-  "/eyewave",
-  "/banners/index.html",
+  // "/eyewave",
+  // "/banners/index.html",
   "/multiCube",
-  "/emails/santou/index.html",
-  "/emails/insBE/index.html",
-  "/banners/lum/index.html",
-  "/banners/lum/index.html",
+  // "/emails/santou/index.html",
+  // "/emails/insBE/index.html",
+  // "/banners/index.html",
+  // "/banners/lum/index.html",
 ];
 
 // const imageRoutes: string[] = [
@@ -50,13 +50,13 @@ const imageTitles: string[] = [
   "Hero Search",
   "Band Stats",
   "Solar Search",
-  "Eye Wave",
-  "Banners",
+  // "Eye Wave",
+  // "Banners",
   "Multi Cube",
-  "San Email",
-  "Ins Email",
-  "Lum Banners",
-  "Lum Banners",
+  // "San Email",
+  // "Ins Email",
+  // "Lum Banners",
+  // "Lum Banners",
 ];
 
 const imageDescriptions: string[] = [
