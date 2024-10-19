@@ -71,7 +71,7 @@
             "sales": "400,000"
           }
         ],
-        "image": "/bandpix/apc.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/apc.jpg",
         "trivia": [
           "The name 'A Perfect Circle' was inspired by a recurring concept in Billy Howerdel's life and artwork, symbolizing completeness and unity.",
           "Maynard James Keenan often performs with the band wearing a wig, distinguishing his stage persona from his appearance in Tool.",
@@ -191,7 +191,7 @@
             "sales": "2.5 million"
           }
         ],
-        "image": "/bandpix/gnr.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/gnr.jpg",
         "trivia": [
           "Guns N' Roses' debut album 'Appetite for Destruction' is one of the best-selling albums of all time.",
           "The band's music video for 'November Rain' was the first YouTube video from the 1990s to reach one billion views.",
@@ -254,7 +254,7 @@
             "sales": "200,000"
           }
         ],
-        "image": "/bandpix/ghost.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/ghost.jpg",
         "trivia": [
           "Ghost is known for their elaborate stage presence and the mysterious identities of their band members, who are always seen in identical costumes.",
           "The band’s frontman, known as Papa Emeritus, changes his stage persona with each album cycle.",
@@ -330,7 +330,7 @@
             "sales": "30 million"
           }
         ],
-        "image": "/bandpix/pinkfloyd.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/pinkfloyd.jpg",
         "trivia": [
           "Pink Floyd's 'The Dark Side of the Moon' remained on the Billboard charts for over 900 weeks.",
           "The band is known for their progressive and psychedelic music, and their live shows featured elaborate stage effects.",
@@ -397,7 +397,7 @@
             "sales": "16 million"
           }
         ],
-        "image": "/bandpix/ledzeppelin.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/ledzeppelin.jpg",
         "trivia": [
           "Led Zeppelin's untitled fourth album is often referred to as 'Led Zeppelin IV' and includes the iconic song 'Stairway to Heaven'.",
           "The band is one of the best-selling music artists in the history of audio recording.",
@@ -464,7 +464,7 @@
             "sales": "2 million"
           }
         ],
-        "image": "/bandpix/megadeth.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/megadeth.jpg",
         "trivia": [
           "Dave Mustaine formed Megadeth after being fired from Metallica in 1983.",
           "Megadeth is considered one of the 'Big Four' of thrash metal, along with Metallica, Slayer, and Anthrax.",
@@ -531,7 +531,7 @@
             "sales": "16 million"
           }
         ],
-        "image": "/bandpix/metallica.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/metallica.jpg",
         "trivia": [
           "Metallica's self-titled album, also known as 'The Black Album', is one of the best-selling albums of all time.",
           "The band was inducted into the Rock and Roll Hall of Fame in 2009.",
@@ -597,7 +597,7 @@
             "sales": "2 million"
           }
         ],
-        "image": "/bandpix/thedoors.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/thedoors.jpg",
         "trivia": [
           "The Doors took their name from Aldous Huxley's book 'The Doors of Perception'.",
           "Jim Morrison was known for his wild stage presence and poetic lyrics.",
@@ -664,7 +664,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/clutch.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/clutch.jpg",
         "trivia": [
           "Clutch is known for their energetic live shows and Neil Fallon's distinctive voice and lyrics.",
           "The band's music spans a variety of genres, including hard rock, blues rock, and stoner rock.",
@@ -736,7 +736,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/faithnomore.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/faithnomore.jpg",
         "trivia": [
           "Faith No More is considered one of the most influential bands in the alternative metal genre.",
           "Their breakthrough hit 'Epic' helped bring rap-rock to the mainstream.",
@@ -802,7 +802,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/fantomas.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/fantomas.jpg",
         "trivia": [
           "Fantômas is a supergroup featuring members from various influential bands such as Faith No More, Melvins, and Slayer.",
           "The band's music is known for its experimental nature, blending elements of metal, avant-garde, and film scores.",
@@ -868,7 +868,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/tomahawk.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/tomahawk.jpg",
         "trivia": [
           "Tomahawk was formed by members of bands such as Faith No More, The Jesus Lizard, Helmet, and Mr. Bungle.",
           "Their third album 'Anonymous' features songs inspired by Native American music.",
@@ -989,7 +989,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/slayer.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/slayer.jpg",
         "trivia": [
           "Slayer is considered one of the 'Big Four' of thrash metal, along with Metallica, Megadeth, and Anthrax.",
           "Their third album, 'Reign in Blood', is widely regarded as one of the greatest heavy metal albums of all time.",
@@ -1068,7 +1068,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/mushroomhead.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/mushroomhead.jpg",
         "trivia": [
           "Mushroomhead is known for their distinctive masks and theatrical live performances.",
           "The band has gone through numerous lineup changes over the years.",
@@ -1142,7 +1142,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/aliceinchains.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/aliceinchains.jpg",
         "trivia": [
           "Alice in Chains is one of the most successful bands to emerge from the Seattle grunge scene.",
           "Their music often features dark and somber themes, dealing with depression, addiction, and death.",
@@ -1209,7 +1209,7 @@
             "sales": "unknown"
           }
         ],
-        "image": "/bandpix/soundgarden.jpg",
+        "image": "https://github.com/eiannucci/brainhaxmedia-njs-2024/blob/main/public/bandpix/soundgarden.jpg",
         "trivia": [
           "Soundgarden was one of the pioneering bands of the Seattle grunge movement.",
           "Their breakthrough album, 'Superunknown', debuted at number one on the Billboard 200 chart.",
