@@ -153,54 +153,7 @@ const Home: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles.grid}>
-        <a
-          href="https://www.linkedin.com/in/elijahiannucci/"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Linkedin <span>-&gt;</span>
-          </h2>
-          <p>Connections are welcome!</p>
-        </a>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Contact <span>-&gt;</span>
-          </h2>
-          <p>LOREM</p>
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Bio <span>-&gt;</span>
-          </h2>
-          <p>LOREM</p>
-        </a>
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            GitHub <span>-&gt;</span>
-          </h2>
-          <p>
-            LOREM
-          </p>
-        </a>
-      </div>
+
     </main>
   );
 };
