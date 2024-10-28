@@ -14,6 +14,9 @@ interface Planet {
   bodyType: string;
   gravity: number;
   density: number;
+  founder: string;
+  dDate: string;
+  latinName: string;
 }
 
  const SolarSearchApp: React.FC = () => {
@@ -40,6 +43,9 @@ interface Planet {
             bodyType: body.bodyType,
             gravity: body.gravity,
             density: body.density,
+            founder: body.discoveredBy,
+            dDate: body.discoveryDate,
+            latinName: body.name,
           };
         });
         setPlanets(planetData);
@@ -115,6 +121,24 @@ interface Planet {
                       <span className={styles["type-header"]}>Density:</span>
                       <span className={styles["type-details"]}>
                         {planet.density}
+                      </span>
+                    </div>
+                    <div className={styles.planetInfo}>
+                      <span className={styles["type-header"]}>Founder:</span>
+                      <span className={styles["type-details"]}>
+                        {planet.founder}
+                      </span>
+                    </div>
+                    <div className={styles.planetInfo}>
+                      <span className={styles["type-header"]}>Discovery Date:</span>
+                      <span className={styles["type-details"]}>
+                        {planet.dDate}
+                      </span>
+                    </div>
+                    <div className={styles.planetInfo}>
+                      <span className={styles["type-header"]}>Discovery Name:</span>
+                      <span className={styles["type-details"]}>
+                        {planet.latinName}
                       </span>
                     </div>
                   </div>

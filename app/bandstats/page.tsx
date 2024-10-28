@@ -72,14 +72,15 @@ const BandStats: React.FC = () => {
           <Col key={index} sm={12} md={4}>
             <Card className="m-4">
               {band.image ? (
-                <Image
-                  src={band.image}
-                  alt={band.band_name}
-                  layout="responsive"
-                  width={500}
-                  height={300}
-                  className="card-img-top"
-                />
+                // <Image
+                //   src={band.image}
+                //   alt={band.band_name}
+                //   layout="responsive"
+                //   width={500}
+                //   height={300}
+                //   className="card-img-top"
+                // />
+                <img src={band.image}/>
               ) : (
                 <p>No image available</p>
               )}
