@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./home.module.css";
 import { useEffect, useRef } from 'react';
@@ -12,73 +11,75 @@ const imageSources: string[] = [
   "/images/cover-superhero.jpg",
   "/images/cover-bandstats.jpg",
   "/images/cover-solarsearch.jpg",
-  // "/images/cover-eyewave.jpg",
-  // "/images/cover-banners.png",
+  "/images/cover-banners.png",
   "/images/cover-cube.png",
-  // "/images/cover-san-email.png",
+  "/images/cover-bhm.png",
+  // "/images/cover-eyewave.jpg",
   // "/images/cover-ins-email.png",
   // "/images/cover-ins-email.png",
   // "/images/cover-ins-email.png",
 ];
 
+// -------------------------------
+// for prod
+// -------------------------------
 const imageRoutes: string[] = [
-  "/superheroSearch",
-  "/bandstats",
-  "/solarSearch",
-  // "/eyewave",
-  // "/banners/index.html",
-  "/multiCube",
-  // "/emails/santou/index.html",
+  "/superheroSearch.html",
+  "/bandstats.html",
+  "/solarSearch.html",
+  "/banners/index.html",
+  "/multiCube.html",
+  "/emails/BHM/index.html",
+  // "/eyewave.html",
   // "/emails/insBE/index.html",
   // "/banners/index.html",
   // "/banners/lum/index.html",
 ];
 
+// -------------------------------
+// for dev
+// -------------------------------
 // const imageRoutes: string[] = [
 //   "/superheroSearch",
 //   "/bandstats",
 //   "/solarSearch",
-//   "/eyewave",
 //   "/banners",
 //   "/multiCube",
-//   "/emails/santou",
-//   "/emails/insBE",
-//   "/banners/lum",
+//   "/emails/bhm/",
+//   "/banners/",
+//   // "/eyewave",
 // ];
 
 const imageTitles: string[] = [
   "Hero Search",
   "Band Stats",
   "Solar Search",
-  // "Eye Wave",
-  // "Banners",
+  "Banners",
   "Multi Cube",
-  // "San Email",
+  "Example Email",
+  // "Eye Wave",
   // "Ins Email",
   // "Lum Banners",
   // "Lum Banners",
 ];
-
 const imageDescriptions: string[] = [
-  "Discover superheroes",
-  "Explore band statistics",
-  "Search solar systems",
-  "Experience Eye Wave",
-  "Create banners",
-  "Play with cubes",
-  "Manage San emails",
-  "Handle Ins emails",
-  "Lum Banners",
-  "Lum Banners",
+  "Discover superheroes with the Metahuman API",
+  "Explore band facts statistics with a custom API that I created",
+  "Search the solar system using NASA'a Solaire API",
+  "Animated Banners built with GULP/Javascript/SCSS/Handlebars for Double-Click Studio",
+  "Experimental 3D cubes",
+  "An HTML email template example",
+  // "Experience Eye Wave",
+  // "Handle Ins emails",
+  // "Lum Banners",
+  // "Lum Banners",
 ];
-
 const Home: React.FC = () => {
   const imageContainerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const setRefs = (el: HTMLDivElement | null, index: number) => {
     imageContainerRefs.current[index] = el;
   };
-
   useEffect(() => {
     imageContainerRefs.current.forEach((imageContainerRef, index) => {
       if (imageContainerRef) {
@@ -89,17 +90,7 @@ const Home: React.FC = () => {
         );
       }
     });
-
-    // gsap.to("body", {
-    //   background: "radial-gradient(circle, rgba(83,24,83,1) 0%, rgba(0,0,0,1) 100%)",
-    //   duration: 8,
-    //   repeat: -1,
-    //   yoyo: true,
-    //   ease: "none"
-    // });
-
   }, []);
-
   return (
     <main className={styles.main}>
       <div className={styles.center}>
@@ -116,13 +107,6 @@ const Home: React.FC = () => {
                     <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
                   </a>
                   <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={styles.code}>Senior Interactive Developer</code></span>
-                  {/* <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    Hello, Framer Motion!
-                  </motion.div> */}
                 </div>
               </Col>
             </Row>
@@ -135,7 +119,7 @@ const Home: React.FC = () => {
             className={styles.imageContainer}
           >
             <Link href={imageRoutes[index]}>
-              <img src={src} className={styles.projectImage} width={300} height={169} alt="project image"></img>
+              <img src={src} className={styles.projectImage} width={300} height={169} alt={`Image ${index + 1}`}></img>
               {/* <Image
                 className={styles.projectImage}
                 src={src}
@@ -153,7 +137,7 @@ const Home: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles.grid}>
+      <div className={styles.footer}>
         <a
           href="https://www.linkedin.com/in/elijahiannucci/"
           className={styles.card}
@@ -166,29 +150,7 @@ const Home: React.FC = () => {
           <p>Connections are welcome!</p>
         </a>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Contact <span>-&gt;</span>
-          </h2>
-          <p>LOREM</p>
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Bio <span>-&gt;</span>
-          </h2>
-          <p>LOREM</p>
-        </a>
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://github.com/eiannucci/brainhaxmedia-njs-2024/tree/development"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -197,7 +159,7 @@ const Home: React.FC = () => {
             GitHub <span>-&gt;</span>
           </h2>
           <p>
-            LOREM
+            Check out some code
           </p>
         </a>
       </div>

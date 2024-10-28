@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../scss/HeroSearch.module.scss";
 import "../scss/FontFace.module.scss";
 import ReactGA from "react-ga";
+import subPageStyles from "../home.module.css";
 
 interface Hero {
   alterEgos: string;
@@ -81,6 +82,24 @@ const HeroSearchApp: React.FC = () => {
   return (
     <>
       <Container className="pt-3">
+      <div className={subPageStyles.descriptionSubPage}>
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className={subPageStyles.imgCon}>
+                  <a
+                    href="https://brainhaxmedia.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/logo512.png" className={subPageStyles.logo} alt="logo"></img>
+                  </a>
+                  <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={subPageStyles.code}>Senior Interactive Developer</code></span>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         <Row>
           <Col>
             <Container fluid>
