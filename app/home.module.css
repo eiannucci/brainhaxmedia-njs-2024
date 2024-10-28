@@ -40,6 +40,22 @@
   /* font-family: var(--font-mono); */
 }
 
+.descriptionSubPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #fff;
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 4rem;
+  font-family: 'ArmyRust';
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  margin-top: 4rem;
+  /* font-family: var(--font-mono); */
+}
+
 .description a {
   display: flex;
   justify-content: center;

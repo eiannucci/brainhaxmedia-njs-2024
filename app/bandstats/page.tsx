@@ -5,6 +5,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from "../home.module.css";
 
 interface Band {
   band_name: string;
@@ -68,6 +69,24 @@ const BandStats: React.FC = () => {
   return (
     <Container fluid>
       <Row>
+        <div className={styles.descriptionSubPage}>
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className={styles.imgCon}>
+                  <a
+                    href="https://brainhaxmedia.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/logo512.png" className={styles.logo} alt="logo"></img>
+                  </a>
+                  <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={styles.code}>Senior Interactive Developer</code></span>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         {bands.map((band, index) => (
           <Col key={index} sm={12} md={4}>
             <Card className="m-4">
@@ -80,7 +99,7 @@ const BandStats: React.FC = () => {
                 //   height={300}
                 //   className="card-img-top"
                 // />
-                <img src={band.image}/>
+                <img src={band.image} />
               ) : (
                 <p>No image available</p>
               )}

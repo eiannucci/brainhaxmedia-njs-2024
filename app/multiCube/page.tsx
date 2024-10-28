@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import styles from '../scss/MultiCube.module.scss';
+import subPageStyles from "../home.module.css";
 
 const MultiCube: React.FC = () => {
   useEffect(() => {
@@ -26,6 +27,24 @@ const MultiCube: React.FC = () => {
     <Container id="cube">
       <Row>
         <Col>
+          <div className={subPageStyles.descriptionSubPage}>
+            <Container fluid>
+              <Row>
+                <Col>
+                  <div className={subPageStyles.imgCon}>
+                    <a
+                      href="https://brainhaxmedia.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="/images/logo512.png" className={subPageStyles.logo} alt="logo"></img>
+                    </a>
+                    <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={subPageStyles.code}>Senior Interactive Developer</code></span>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
           <div className={styles.container}>
             {[...Array(3)].map((_, index) => (
               <div key={index} className={styles.cube}>

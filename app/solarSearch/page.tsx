@@ -8,6 +8,7 @@ import { FaGalacticRepublic } from "react-icons/fa";
 import Form from "react-bootstrap/Form";
 import ReactGA from "react-ga";
 import styles from "../scss/SolarSearch.module.scss";
+import subPageStyles from "../home.module.css";
 
 interface Planet {
   englishName: string;
@@ -19,7 +20,7 @@ interface Planet {
   latinName: string;
 }
 
- const SolarSearchApp: React.FC = () => {
+const SolarSearchApp: React.FC = () => {
   const [planets, setPlanets] = useState<Planet[]>([]);
   const [searchText, setSearchText] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
@@ -72,6 +73,24 @@ interface Planet {
   return (
     <React.Fragment>
       <Container fluid>
+        <div className={subPageStyles.descriptionSubPage}>
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className={subPageStyles.imgCon}>
+                  <a
+                    href="https://brainhaxmedia.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="/images/logo512.png" className={subPageStyles.logo} alt="logo"></img>
+                  </a>
+                  <span className="header-name">Elijah Iannucci&nbsp;::&nbsp;<code className={subPageStyles.code}>Senior Interactive Developer</code></span>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         <Row>
           <Col>
             <InputGroup className="my-3">
@@ -100,7 +119,7 @@ interface Planet {
             <Row>
               <Col>
                 <div className={styles["planet-container"]}>
-                  <div style={{background:'#0000ff80', padding:'1rem', borderRadius: '10px'}}>
+                  <div style={{ background: '#0000ff80', padding: '1rem', borderRadius: '10px' }}>
                     {/* <SolarBackToTopButton /> */}
                     <div className={styles["planet-name"]}>
                       {planet.englishName}
